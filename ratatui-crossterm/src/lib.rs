@@ -80,9 +80,9 @@ cfg_if::cfg_if! {
     // Re-export the selected Crossterm crate making sure to choose the latest version. We do this
     // to make it possible to easily enable all features when compiling `ratatui-crossterm`.
     if #[cfg(feature = "crossterm_0_29")] {
-        pub use crossterm_0_29 as crossterm;
+        pub use crossterm as crossterm;
     } else if #[cfg(feature = "crossterm_0_28")] {
-        pub use crossterm_0_28 as crossterm;
+        pub use crossterm as crossterm;
     } else {
         compile_error!(
             "At least one crossterm feature must be enabled. See the crate docs for more information."
