@@ -58,8 +58,8 @@ impl<B: Backend> Terminal<B> {
 
     /// Resize internal buffers and update the current viewport area.
     ///
-    /// This is an internal helper used by [`Terminal::with_options`] and [`Terminal::resize`].
-    pub(crate) fn set_viewport_area(&mut self, area: Rect) {
+    /// This is primarily used by [`Terminal::with_options`] and [`Terminal::resize`].
+    pub fn set_viewport_area(&mut self, area: Rect) {
         self.buffers[self.current].resize(area);
         self.buffers[1 - self.current].resize(area);
         self.viewport_area = area;
