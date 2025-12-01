@@ -77,6 +77,9 @@ unicode-truncate = { version = "2", default-features = false }
 # See <https://github.com/ratatui/ratatui/issues/1271> for information about why we keep unicode-width on 0.2.x
 unicode-width = "0.2.2"
 
+[patch.crates-io]
+crossterm = { git = "ssh://git@github.com/takumi-earth/crossterm.git", rev = "b87b8e3b77283d41d7106d87357f929db2e00368" }
+
 # Improve benchmark consistency
 [profile.bench]
 codegen-units = 1
