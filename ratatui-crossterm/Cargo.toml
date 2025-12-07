@@ -54,7 +54,7 @@ unstable-backend-writer = []
 
 
 [dependencies]
-cfg-if = "1.0.1"
+cfg-if = { workspace = true }
 crossterm = { workspace = true, optional = true }
 document-features = { workspace = true, optional = true }
 instability.workspace = true
