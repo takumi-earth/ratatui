@@ -76,9 +76,13 @@ unicode-segmentation = "1"
 unicode-truncate = { version = "2", default-features = false }
 # See <https://github.com/ratatui/ratatui/issues/1271> for information about why we keep unicode-width on 0.2.x
 unicode-width = "0.2.2"
+cfg-if = { version = "1.0.1" }
+clap-verbosity-flag = { version = "3.0.4", default-features = false, features = ["tracing"] }
+duct = { version = "1.1.1" }
+line_drawing = { version = "1.0.1" }
 
 [patch.crates-io]
-crossterm = { git = "ssh://git@github.com/takumi-earth/crossterm.git", rev = "b87b8e3b77283d41d7106d87357f929db2e00368" }
+crossterm = { git = "ssh://git@github.com/takumi-earth/crossterm.git", branch = "master" }
 
 # Improve benchmark consistency
 [profile.bench]
