@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 <!-- ignore lint rules that are often triggered by content generated from commits / git-cliff -->
 <!-- markdownlint-disable line-length no-bare-urls ul-style emphasis-style -->
 
+## [Unreleased]
+
+### Fixed
+
+- align crossterm feature flags so `--all-features` resolves a single crossterm 0.29 dependency (sourced from the `takumi-earth/crossterm` fork) and keep the legacy `crossterm_0_28` flag as an alias for compatibility
+- make `Terminal::set_viewport_area` public so downstreams can resize buffers explicitly when integrating custom viewports
+- ensure we stay on the latest `unicode-width` 0.2.x release that includes the upstream newline-width correction without pinning to a specific patch version
+
 
 ## [v0.30.0](https://github.com/ratatui/ratatui/releases/tag/v0.30.0) - 2025-12-26
 
